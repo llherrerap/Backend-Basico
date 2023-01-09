@@ -5,5 +5,6 @@ Por ejemplo, en mátematicas el valor de PI no cambia, es cosntante.
 Vea el siguiente código*/
 
 const PI=3.1416
-//Otra manera de concatenar texto es: `Texto ${variable / constante}`
+/*Interpolación de variables: Tener dentro de una cadena de texto un valor dinamico de la siguiente manera
+    `Texto ${variable / constante}`*/
 console.log(`El valor de PI es: ${PI}`)
