@@ -87,4 +87,9 @@ let mayor=a>b,
     igual=a==b,
     distinto=a!=b
 
-console.log(`La variable ${a} es mayor que ${b}: ${mayor}`)
+console.log(`La variable ${a} es mayor que ${b}: ${mayor}
+La variable ${a} es menor que ${b}: ${menor}
+La variable ${a} es mayor o igual que ${b}: ${mayorIgual}
+La variable ${a} es menor o igual que ${b}: ${menorIgual}
+La variable ${a} es igual que ${b}: ${igual}
+La variable ${a} es distinta que ${b}: ${distinto}`)
