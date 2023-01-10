@@ -29,11 +29,26 @@ console.log("-----------------Recorrer un arreglo----------------------")
 
 let numeros=[10,20,30,40,50,60,70,80,90]
 
-numeros.forEach(numero => { //imprimir los elementos de un array
-    console.log(`vamos por el numero ${numero}`)
-});
+//for
+
+console.log("-----------------For----------------------")
 
 for (let i = 0; i < numeros.length; i++) {
-    console.log(`El for esta recorriendo el arreglo y vamos por el ${numeros[i]}`)
-    
+    console.log(`El for va por el ${numeros[i]}`)
+}
+
+//forEach
+
+console.log("-----------------ForEach----------------------")
+
+numeros.forEach(numero => { //imprimir los elementos de un array
+    console.log(`El forEach of va por el ${numero}`)
+});
+
+//for of
+
+console.log("-----------------For Of---------------------")
+
+for (const item of numeros) {
+    console.log(`El for of va por el ${item}`)
 }
