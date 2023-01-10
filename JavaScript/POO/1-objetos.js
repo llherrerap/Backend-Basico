@@ -29,3 +29,21 @@ console.log(`Hola, mi nombre es ${persona.nombre} y mi edad es ${persona.edad}, 
 
 //Para llamar la función dentro del objeto utilizamos el . tambien
 persona.llamar();
+
+/*Se pueden recorrer las propiedades de un objeto utilizando el ciclo for*/
+
+console.log("-----------------Recorrer un objeto----------------------")
+
+//For in: loop que permite recorrer las propiedades de un objeto
+
+const mario={ //Objeto mario
+    //Propiedades
+    nombre:"Mario",
+    apellido:"Mendoza",
+    edad:42       
+}
+
+//Por cada llave en el objeto mario se imprimira la llave y el valor
+for (const key in mario) {
+    console.log(`Llave: ${key}, Valor: ${mario[key]}`)
+}
