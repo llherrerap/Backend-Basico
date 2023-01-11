@@ -33,6 +33,9 @@ let numeros=[10,20,30,40,50,60,70,80,90]
 
 console.log("-----------------For----------------------")
 
+/*length es una propiedad de los arreglos con la que se puede obtener la cantidad de elementos que tiene un arreglo. Se puede usar de la siguinete manera:
+nombreArreglo.length*/
+
 for (let i = 0; i < numeros.length; i++) {
     console.log(`El for va por el ${numeros[i]}`)
 }
