@@ -57,92 +57,67 @@ $domArbol.innerHTML = textArbol; //Propiedad que permite remplazar el contenido 
 /*Metodos
     -setAttribute()
     -appendChild()
-    -AppendChild()
     -document.write()
-    -document.createElement()
-    -insertAdjacentHTML()
-    -insertAdjacentElement()
-    -insertAdjacentText() */
+    -document.createElement() */
 
-const $figure = document.createElement("figure"),
-  $img = document.createElement("img"),
-  $figcaptionText = document.createTextNode("Animals"),
-  $imagenes = document.querySelector(".imagenes"),
-  $figure2 = document.createElement("figure");
+const $figure = document.createElement("figure"), //Método que crea un elemento HTML
+  $img = document.createElement("img"), //Método que crea un elenento HTML de tipo img
+  $imagenes = document.querySelector(".imagenes"), //Selector de la clase imagenes en HTML
+  $figure2 = document.createElement("figure"); //Crea otro elemento figure
 
-$img.setAttribute("src", "https://placeimg.com/200/200/animals");
+$img.setAttribute("src", "https://placeimg.com/200/200/animals"); //Metodo que accede a los Atributos de los elementos
 $img.setAttribute("alt", "Animals");
-$figure.classList.add("card");
 
-$figure.appendChild($img);
+$figure.appendChild($img); //Para incorporar elementos hijos a elementos padres.
+//elementoPadre.appendChild(elementoHijo)
 $imagenes.appendChild($figure);
 
+//Otra forma de crear un elemento puede ser utilizando la propiedad innerHTML y agregar el nodo
 $figure2.innerHTML = `
 <img src="https://placeimg.com/200/200/people" alt="People">
-<figcaption>People</figcaption>
+<figcaption>Personas</figcaption>
 `;
-$figure2.classList.add("card");
 
-$imagenes.appendChild($figure2);
+$imagenes.appendChild($figure2);//Al helemento padre imagenes se le agrega el elemento hijo nuevo figure2
+
+//Creando elementos 
 
 const estaciones = ["Primavera", "Verano", "Otoño", "Invierno"],
-  $ul = document.createElement("ul");
+  $ul = document.createElement("ul"); //Creando el elemento ul para listas
 
+//document.write() permite escribir una cadena de texto dentro del HTML
 document.write("<h3>Estaciones del Año</h3>");
-document.body.appendChild($ul);
+document.body.appendChild($ul); //Agregando al elemento body el elemento ul
 
-estaciones.forEach((el) => {
+estaciones.forEach((elemento) => { //Por cada elemento del arreglo agregar un li para agregarlo dentro del ul
   const $li = document.createElement("li");
-  $li.textContent = el;
-  $ul.appendChild($li);
+  $li.textContent = elemento; //el contenido de texto de la etiqueta li va a ser el elemento del arreglo
+  $ul.appendChild($li); //Agregar los li al elemento ul
 });
 
-const continentes = ["África", "América", "Asia", "Europa", "Oceanía"],
-  $ul2 = document.createElement("ul");
-
-document.write("<h3>Continentes del Mundo</h3>");
-document.body.appendChild($ul2);
-$ul2.innerHTML = "";
-continentes.forEach((el) => ($ul2.innerHTML += `<li>${el}</li>`));
-
-const meses = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ],
-  $ul3 = document.createElement("ul"),
-  $fragment = document.createDocumentFragment();
-
-meses.forEach((el) => {
-  const $li = document.createElement("li");
-  $li.textContent = el;
-  $fragment.appendChild($li);
-});
-
-document.write("<h3>Meses del Año</h3>");
-$ul3.appendChild($fragment);
-document.body.appendChild($ul3);
-
-//Modificando elementos.
+/*Métodos que permiten insertar contenido de acuerdo a una posicion
+  -insertAdjacentHTML(posicion,html)
+  -insertAdjacentElement(posicion,elemento)
+  -insertAdjacentText(posicion,texto)
+Las posiciones son:
+  -beforebegin(nodo anterior)
+  -afterbegin(primer nodo)
+  -beforeend(ultimo nodo)
+  -afterend(nodo siguiente)
+*/
 
 const $selectorImagenes = document.querySelector(".imagenes"),
   $nuevaImagen = document.createElement("figure");
 
-let $contenCard = `
-  <img src="https://placeimg.com/200/200/any" alt="Any">
+let $contenidoHTML = `
+  <img src="https://placeimg.com/200/200/any" alt="any">
   <figcaption></figcaption>
 `;
 $nuevaImagen.classList.add("imagen");
 
-$nuevaImagen.insertAdjacentHTML("afterbegin", $contenCard);
+//Método que inserta contenido HTML dependiendo una posicion
+$nuevaImagen.insertAdjacentHTML("afterbegin", $contenidoHTML);
+//Método que inserta un elemento dependiendo una posicion
 $selectorImagenes.insertAdjacentElement("beforeend", $nuevaImagen);
-$nuevaImagen.querySelector("figcaption").insertAdjacentText("afterbegin", "Any");
+//Método que inserta texto dependiendo una posicion
+$nuevaImagen.querySelector("figcaption").insertAdjacentText("afterbegin", "Fig. Descripción");
