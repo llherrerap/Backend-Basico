@@ -1,0 +1,14 @@
+{
+  "name": "parametros-query",
+  "version": "1.0.0",
+  "description": "Primer servidor con express y nodejs, simulando una base de datos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Curso backend",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

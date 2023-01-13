@@ -3,25 +3,25 @@
 let infoCursos = {
     programacionWebBackend: [
         {
-            if: 1,
+            id: 1,
             titulo: "javascript",
             descripcion: "Curso de javascript",
             nivel: "basico"
         },
         {
-            if: 2,
+            id: 2,
             titulo: "javascript",
             descripcion: "Curso de javascript",
             nivel: "intermedio"
         },
         {
-            if: 3,
+            id: 3,
             titulo: "nodejs",
             descripcion: "Curso de nodejs",
             nivel: "basico"
         },
         {
-            if: 4,
+            id: 4,
             titulo: "nodejs",
             descripcion: "Curso de nodejs",
             nivel: "intermedio"
@@ -29,25 +29,25 @@ let infoCursos = {
     ],
     programacionWebFrontend: [
         {
-            if: 1,
+            id: 1,
             titulo: "css",
             descripcion: "Curso de css",
             nivel: "basico"
         },
         {
-            if: 2,
+            id: 2,
             titulo: "css",
             descripcion: "Curso de css",
             nivel: "intermedio"
         },
         {
-            if: 3,
+            id: 3,
             titulo: "react",
             descripcion: "Curso de react",
             nivel: "basico"
         },
         {
-            if: 4,
+            id: 4,
             titulo: "react",
             descripcion: "Curso de react",
             nivel: "intermedio"
