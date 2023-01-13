@@ -1,5 +1,5 @@
 //servidor
-// server.js
+// servidor
 const config = require('./config.js');
 const express = require('express');
 const app = express();
