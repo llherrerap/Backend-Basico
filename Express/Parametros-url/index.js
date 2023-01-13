@@ -14,11 +14,11 @@ app.get('/', (req, res) => {
 app.get('/api/cursos', (req, res) => {
     res.send(JSON.stringify(infoCursos));
 });
-//informacion solo de los cursos de programacion
+//informacion solo de los cursos de programacion backend
 app.get('/api/cursos/programacion-web-backend', (req, res) => {
     res.send(JSON.stringify(infoCursos.programacionWebBackend));
 });
-//informacion solo de los cursos de programacion
+//informacion solo de los cursos de programacion frontend
 app.get('/api/cursos/programacion-web-frontend', (req, res) => {
     res.send(JSON.stringify(infoCursos.programacionWebFrontend));
 });

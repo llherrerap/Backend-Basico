@@ -10,21 +10,31 @@ app.get('/', (req, res) => {
     res.setHeader("Content-Type", "text/html");
     res.send("<h1>Hola mundo!</h1>");
 });
+
+
+//Routers
+const routerCursos = express.Router();
+app.use('/api/cursos', routerCursos);
+const routerBackend = express.Router();
+routerCursos.use('/programacion-web-backend', routerBackend);
+const routerFrontend = express.Router();
+routerCursos.use('/programacion-web-frontend', routerFrontend);
+
 //informacion de todos los cursos
-app.get('/api/cursos', (req, res) => {
+routerCursos.get('/', (req, res) => {
     res.send(JSON.stringify(infoCursos));
 });
 //informacion solo de los cursos de programacion backend
-app.get('/api/cursos/programacion-web-backend', (req, res) => {
+routerBackend.get('/', (req, res) => {
     res.send(JSON.stringify(infoCursos.programacionWebBackend));
 });
 //informacion solo de los cursos de programacion frontend
-app.get('/api/cursos/programacion-web-frontend', (req, res) => {
+routerFrontend.get('/', (req, res) => {
     res.send(JSON.stringify(infoCursos.programacionWebFrontend));
 });
 
 //Parametros url
-app.get('/api/cursos/programacion-web-backend/:titulo', (req, res) => {//se utilizan : para crear parametros url
+routerBackend.get('/:titulo', (req, res) => {//se utilizan : para crear parametros url
     const titulo = req.params.titulo;// se recomienda que sea el mismo nombre que el parametro que definio
     const cursoConcreto = infoCursos.programacionWebBackend.filter(curso => curso.titulo === titulo);//filtro de javascript
     if (cursoConcreto.length === 0) {
