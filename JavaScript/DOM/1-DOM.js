@@ -61,7 +61,7 @@ $domArbol.innerHTML = textArbol; //Propiedad que permite remplazar el contenido 
     -document.createElement() */
 
 const $figure = document.createElement("figure"), //Método que crea un elemento HTML
-  $img = document.createElement("img"), //Método que crea un elenento HTML de tipo img
+  $img = document.createElement("img"), //Método que crea un elemento HTML de tipo img
   $imagenes = document.querySelector(".imagenes"), //Selector de la clase imagenes en HTML
   $figure2 = document.createElement("figure"); //Crea otro elemento figure
 
@@ -78,7 +78,7 @@ $figure2.innerHTML = `
 <figcaption>Personas</figcaption>
 `;
 
-$imagenes.appendChild($figure2);//Al helemento padre imagenes se le agrega el elemento hijo nuevo figure2
+$imagenes.appendChild($figure2);//Al elemento padre imagenes se le agrega el elemento hijo nuevo figure2
 
 //Creando elementos 
 
