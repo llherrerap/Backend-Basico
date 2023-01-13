@@ -1,5 +1,5 @@
 {
-  "name": "creacion-servidor-partedos",
+  "name": "parametros-url",
   "version": "1.0.0",
   "description": "Primer servidor con express y nodejs, simulando una base de datos",
   "main": "index.js",
