@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="buscaflores.js"></script>
+    
+    <link rel="icon" href="Imagenes/IconoCabecera.png" />
+    <title>BUSCAFLORECITAS</title>
+</head>
+<body>	
+    <div class="wrapper">
+        <div class="sidebar">
+            <h1>BUSCAFLORECITAS</h1>
+            <h2>Menú</h2>
+            <img class="imagenTitulo1" src="Imagenes/IconoTitulo.png" width="20px" height="20px">
+            <img class="imagenTitulo2" src="Imagenes/IconoTitulo.png" width="20px" height="20px">
+            <img class="imagenMenu" src="Imagenes/IconoMenu.png" width="70px" height="70px">
+            <img class="imagenJuego" src="Imagenes/iconoJuego.png" width="20px" height="20px">
+            <img class="imagenPartidas" src="Imagenes/IconoPartidas.png" width="20px" height="20px">
+            <img class="imagenReglas" src="Imagenes/IconoReglas.png" width="20px" height="20px">
+
+            
+            
+            <ul>
+                <li onclick="iniciarBotones()"><a href="#tablero"><i class="fas juegoNuevo"></i>Juego nuevo</a></li>
+                <li><a href="#partidas"><i class="fas partidasJugadas"></i>Partidas jugadas</a></li>
+                <li><a href="#reglas"><i class="fas regla"></i>Reglas</a></li>
+            </ul> 
+        </div>
+        <div class="main_content">
+            
+            <img class="imagenNinos" src="Imagenes/ninos.png" width="350px" height="200px">
+            <img class="imagenFlor1" src="Imagenes/flor.png" width="40px" height="40px">
+            <img class="imagenFlor2" src="Imagenes/flor.png" width="40px" height="40px">
+            <img class="imagenFlor3" src="Imagenes/flor.png" width="40px" height="40px">
+            <img class="imagenFlor4" src="Imagenes/flor.png" width="40px" height="40px">
+            <img class="imagenFlor5" src="Imagenes/flor.png" width="40px" height="40px">
+            <img class="imagenFlor6" src="Imagenes/flor.png" width="40px" height="40px">
+            
+            <a name="tablero"> </a>
+            <div class="tablero">          
+            </div>
+            <a name="partidas">
+                <div class="partidas">
+                    <div class="partidasTotales">
+                        <h1>Partidas jugadas</h1><br>
+                    </div>
+                    <div class="partidasGanadas">
+                        <h1>Partidas ganadas</h1><br>
+                    </div>
+                    <div class="partidasPerdidas">
+                        <h1>Partidas perdidas</h1><br>
+                    </div>
+                </div>
+            </a>
+            <a name="reglas">
+                <div class="reglas">
+                    <h1>Reglas</h1>
+                    <div>El juego consiste en despejar todas las casillas de una pantalla que no oculten una flor. con el fin de encontrarlas todas al final.</div>
+                    <div>Algunas casillas tienen un número, el cual indica la cantidad de flores que hay en las casillas circundantes. Así, si una casilla tiene el número 3, significa que de las ocho casillas que hay alrededor (si no es en una esquina o borde) hay 3 con flores y 5 sin flores. Si se descubre una casilla sin número indica que ninguna de las casillas vecinas tiene flor y éstas se descubren automáticamente.</div>
+                    <div>Si se descubre una casilla con una flor se pierde la partida.</div>
+                    <div>Se puede poner una marca en las casillas que el jugador piensa que hay flores para ayudar a descubrir las que están cerca.</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+        iniciarBotones();
+        puntos();
+    </script>   
+</body>
+</html>
