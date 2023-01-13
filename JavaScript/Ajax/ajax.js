@@ -18,13 +18,11 @@ Al ejecutar el evento, el más utilizado es readystatechange. Para agregar el ev
     4. Enviar la peticion con send()
 */
 
-const ajax = new XMLHttpRequest(), //Variable ajax que instancia del objeto XMLHttpRequest
-  $lista = document.getElementById("lista"), //variable que hace referencia al nodo ol del HTML id="lista"
-  $fragmento = document.createDocumentFragment(); //Fragmento en donde se guardaran las listas
+const ajax = new XMLHttpRequest() //Variable ajax que instancia del objeto XMLHttpRequest
 
 //Asignación de los eventos que se vayan a manipular en la petición
 ajax.addEventListener("readystatechange", (e) => { 
-    //Lógica de la programación
+    //Lógica de la programación del evento
 
     /*Estados de la peticion:
         -0 No inicializado: El método open no ha sido llamado
@@ -34,8 +32,11 @@ ajax.addEventListener("readystatechange", (e) => {
         -4 Completado: La propiedad responseText tiene todos los datos pedidos.
     */
 
-
     if (ajax.readyState !== 4) return; //Cuando el estado sea diferente a 4 el programa no va a retornar ninguna información. Sin este condicional la logica de la programacion se imprimirá en cada cambio de estado
+
+    /*Instancia del objeto XMLHttpRequest()*/
+
+    console.log(ajax)
 
     console.log("-----------------Propiedades AJAX----------------------")
 
