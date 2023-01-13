@@ -1,0 +1,14 @@
+{
+  "name": "ejemplo-basico",
+  "version": "1.0.0",
+  "description": "Ejemplo basico de variables de entorno en nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "set HOST=localhost&& set PORT=8000&& node index.js"
+  },
+  "author": "Curso de backend",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
