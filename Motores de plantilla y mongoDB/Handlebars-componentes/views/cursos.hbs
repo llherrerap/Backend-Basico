@@ -1,0 +1,7 @@
+{{!-- Plantilla para cursos --}}
+<h1 class="center">{{nombre}}</h1>
+<div class="row">
+    {{#each urls}}
+        {{> cartas item=this}}
+    {{/each}}
+</div>
