@@ -1,0 +1,17 @@
+{{!-- Plantilla para cursos --}}
+<h1 class="center">{{nombre}}</h1>
+<div class="row">
+    {{#each urls}}
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="center">
+                    <h5 class="card-title">{{titulo}}</h5>
+                    <p class="card-text">{{descripcion}}</p>
+                    <a href={{this.direccion}} class="btn btn-primary">Ir al curso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
