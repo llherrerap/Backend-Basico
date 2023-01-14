@@ -1,0 +1,28 @@
+.menu{
+    width: 20%; 
+    float: left;
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.menu li{
+    line-height: 100px;
+}
+.wrap-content{
+    width: 80%;
+    float: right; 
+    background: #999;
+    color:#fff; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+}
+#content{
+    margin-left: 50px;
+}
+img{
+    width: 50vh;
+    height: 50vh;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SPA JavaScript</title>
+</head>
+<body onload="getPageContent('home')">
+    <h1>Bienvenidos a SPA con JavaScript</h1>
+    <div class="menu">
+		<ul>
+			<li>
+				<a href="#" onclick="getPageContent('home')">
+					Inicio
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="getPageContent('aboutus')">
+					Sobre Nosotros
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="getPageContent('services')">
+					Servicios
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="getPageContent('contact')">
+					Contacto
+				</a>
+			</li>
+		</ul>
+
+	</div>
+    <div class="wrap-content">
+        <p id="content"><p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
