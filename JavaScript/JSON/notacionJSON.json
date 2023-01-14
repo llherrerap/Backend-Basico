@@ -1,13 +1,3 @@
-/*Notación.
-La notación es similas a la de los objetos literales en JavaScript. 
-Unicamente se pueden usar comillas dobles para definir las claves. Acepta los siguientes tipos de datos:
-    -Cadenas de texto
-    -Nulls
-    -Númericos
-    -Booleanos
-    -Arreglos
-    -Objetos
-*/
 {
     "clave1": "valor1",
     "clave2": null,

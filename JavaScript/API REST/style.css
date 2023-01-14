@@ -1,0 +1,69 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+h1{
+  text-align: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.form>* {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form-response {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form input,
+.form textarea {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.form input[type="submit"] {
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form *::placeholder {
+  color: #000;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
